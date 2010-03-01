@@ -1,0 +1,3 @@
+This sample project demonstrates the variety of chart types that {Seer}[http://github.com/Bantik/seer/] is capable of generating.
+
+The sample project requires a SQLite database in order to function; be sure to run rake db:setup to simultaneously create the database and seed it with sample data.

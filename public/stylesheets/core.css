@@ -1,0 +1,137 @@
+/* @override http://localhost:3000/stylesheets/core.css */
+
+/* @group Normalization */
+
+	body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+		margin: 0;
+		padding: 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 100%;
+		margin: 0px;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	address, caption, cite, code, dfn, em, strong, th, var {
+		font-style: normal;
+		font-weight: normal;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	table td {
+		vertical-align: top;
+		padding: .5em;
+	}
+	fieldset, img {
+		border: 0;
+	}
+	caption, th {
+		text-align: left;
+	}
+	q:before, q:after {
+		content: '';
+	}
+
+/* @end */
+
+/* @group Seer */
+
+	body {
+		font-size: 11pt;
+		font-family: 'Lucida Grande', helvetica, sans-serif;
+		padding: 1em 50px;
+		background-image: url(../images/background.png);
+		width: 975px;
+	}
+	
+	a:link, a:visited {
+		color: #990000;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
+
+	blockquote {
+		padding: 2em;
+		padding-bottom: 6em;
+		margin: 1em 2em -1em 0em;
+		background: #fafafa url(../images/blockquote_bg.png) repeat-x left bottom;
+		border-top: 1px solid #eeeeee;
+	}
+
+	code {
+		font-family: Consolas, Monaco, Courier New, Courier;
+		color: #666666;
+		position: relative;
+		font-size: .9em;
+	}
+	
+	h1 {
+		font-size: 1.25em;
+		padding-bottom: 1em;
+		margin: -1em -28px .5em -28px;
+		padding: 1.5em;
+		height: 1.5em;
+		background-color: #000000;
+		color: #ffffff;
+	}
+
+	h2 {
+		font-size: 1.1em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	
+	ul {
+		margin-left: 1.5em;
+	}
+	
+	ul li {
+		list-style-type: square;
+	}
+	
+	p {
+		margin-top: 1em;
+	}
+	
+	p.footer {
+		border-top: 1px dotted #aaaaaa;
+		margin-top: 4em;
+		padding-top: 1em;
+		font-size: .9em;
+	}
+	
+	.chart {
+		margin-bottom: 1em;
+	}
+	
+	div#logo {
+		float: right;
+		margin-top: -3em;
+		height: 300px;
+		width: 300px;
+		background: url(../images/seer_logo_small.png) no-repeat;
+	}
+	
+/* @end */
+
+/* @group Workarounds */
+
+	.clearfix:after {
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    clear: both;
+	    visibility: hidden;
+	}
+	
+	/* Hides from IE-mac \*/
+	* html .clearfix {height: 1%;}
+	/* End hide from IE-mac */
+
+/* @end */

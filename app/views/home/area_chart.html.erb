@@ -1,0 +1,65 @@
+<h2>Area Chart Example</h2>
+
+<div id="my_area_chart"></div>
+
+<%= Seer::visualize(
+      @data, 
+      :as => :area_chart,
+      :in_element => 'my_area_chart',
+      :series => {
+        :series_label => 'name',
+        :data_label => 'date',
+        :data_method => 'quantity',
+        :data_series => @series
+      },
+      :chart_options => { 
+        :height => 300,
+        :width => 1000,
+        :axis_font_size => 11,
+        :legend => 'right',
+        :colors => ['#7e7587','#990000','#009900'],
+        :title => "Widget Quantities",
+        :point_size => 5
+      }
+     )
+ -%>
+
+<h2>Controller Code</h2>
+
+<blockquote><code><pre>
+  def area_chart
+    @data = Widget.all
+    @series = @data.map{|w| w.widget_stats}
+  end
+</pre></code></blockquote>
+
+<h2>View Code</h2>
+
+<blockquote><code><pre>
+
+&lt;div id="my_area_chart"&gt;&lt;/div&gt;
+
+&lt;%= Seer::visualize(
+      @data, 
+      :as => :area_chart,
+      :in_element => 'my_area_chart',
+      :series => {
+        :series_label => 'name',
+        :data_label => 'date',
+        :data_method => 'quantity',
+        :data_series => @series
+      },
+      :chart_options => { 
+        :axis_font_size => 11,
+        :height => 300,
+        :width => 900,
+        :legend => 'right',
+        :colors => ['#7e7587','#990000','#009900'],
+        :title => "Widget Quantities",
+        :point_size => 5
+      }
+     )
+ -%&gt;
+</pre></code></blockquote>
+
+<p><a href="/">&laquo; Back to Index</a></p>

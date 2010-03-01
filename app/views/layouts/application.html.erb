@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Seer Sample Reports</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="/stylesheets/core.css" media="all" rel="stylesheet" type="text/css" />
+  <%= yield(:head) -%>
+  <%= Seer::init_visualization -%>
+</head>
+
+<body>
+<h1>Seer Sample Reports</h1>
+<%= @content_for_layout -%>
+
+<p class="footer"><a href="http://github.com/Bantik/seer/">Seer</a> was created and is maintained by <a href="http://www.idolhands.com/">Corey Ehmke</a> at <a href="http://www.seologic.com/">SEO Logic</a> and  released under the MIT License.</p>
+
+</body>
+</html>

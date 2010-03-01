@@ -1,0 +1,53 @@
+<h2>Bar Chart Example</h2>
+
+<div id="my_bar_chart"></div>
+
+<%= Seer::visualize(
+      @widgets, 
+      :as => :bar_chart,
+      :in_element => 'my_bar_chart',
+      :series => {:series_label => 'name', :data_method => 'quantity'},
+      :chart_options => {
+        :height => 300,
+        :width => 900,
+        :is_3_d => false,
+        :legend => 'none',
+        :colors => ["#990000"],
+        :title => "Widget Quantities",
+        :title_x => 'Current Quantity'
+      }
+    )
+ -%>
+
+<h2>Controller Code</h2>
+
+<blockquote><code><pre>
+  def bar_chart
+    @widgets = Widget.all
+  end
+</pre></code></blockquote>
+
+<h2>View Code</h2>
+
+<blockquote><code><pre>
+&lt;div id="my_bar_chart"&gt;&lt;/div&gt;
+
+&lt;%= Seer::visualize(
+      @widgets, 
+      :as => :bar_chart,
+      :in_element => 'my_bar_chart',
+      :series => {:series_label => 'name', :data_method => 'quantity'},
+      :chart_options => {
+        :height => 300,
+        :width => 900,
+        :is_3_d => false,
+        :legend => 'none',
+        :colors => ["#990000"],
+        :title => "Widget Quantities",
+        :title_x => 'Quantity'
+      }
+    )
+ -%&gt;
+</pre></code></blockquote>
+
+<p><a href="/">&laquo; Back to Index</a></p>

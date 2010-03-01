@@ -1,0 +1,171 @@
+
+
+Processing HomeController#area_chart (for 127.0.0.1 at 2010-02-28 18:54:07) [GET]
+  [4;36;1mWidget Load (0.9ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/area_chart
+  [4;35;1mWidgetStat Load (0.7ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;36;1mWidgetStat Load (0.6ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;35;1mWidgetStat Load (0.5ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 90ms (View: 41, DB: 3) | 200 OK [http://localhost/area_chart]
+
+
+Processing HomeController#bar_chart (for 127.0.0.1 at 2010-02-28 18:54:13) [GET]
+  [4;36;1mWidget Load (0.6ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/bar_chart
+  [4;35;1mWidgetStat Load (0.3ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mWidgetStat Load (0.2ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mWidgetStat Load (0.2ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/bar_chart]
+
+
+Processing HomeController#column_chart (for 127.0.0.1 at 2010-02-28 18:54:16) [GET]
+  [4;35;1mWidget Load (0.6ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/column_chart
+  [4;36;1mWidgetStat Load (0.3ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mWidgetStat Load (0.2ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mWidgetStat Load (0.2ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+Completed in 82ms (View: 76, DB: 1) | 200 OK [http://localhost/column_chart]
+
+
+Processing HomeController#gauge (for 127.0.0.1 at 2010-02-28 18:54:18) [GET]
+  [4;36;1mWidget Load (0.9ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/gauge
+  [4;35;1mWidgetStat Load (0.4ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mWidgetStat Load (0.3ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mWidgetStat Load (0.2ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+Completed in 20ms (View: 14, DB: 2) | 200 OK [http://localhost/gauge]
+
+
+Processing HomeController#line_chart (for 127.0.0.1 at 2010-02-28 18:54:19) [GET]
+  [4;35;1mWidget Load (0.6ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/line_chart
+  [4;36;1mWidgetStat Load (0.8ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;35;1mWidgetStat Load (0.6ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;36;1mWidgetStat Load (0.5ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 22ms (View: 12, DB: 3) | 200 OK [http://localhost/line_chart]
+
+
+Processing HomeController#line_chart (for 127.0.0.1 at 2010-02-28 18:56:14) [GET]
+  [4;36;1mWidget Load (1.0ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/line_chart
+  [4;35;1mWidgetStat Load (0.8ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;36;1mWidgetStat Load (0.6ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;35;1mWidgetStat Load (0.5ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 49ms (View: 23, DB: 3) | 200 OK [http://localhost/line_chart]
+
+
+Processing HomeController#line_chart (for 127.0.0.1 at 2010-02-28 18:57:20) [GET]
+  [4;36;1mWidget Load (0.9ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/line_chart
+  [4;35;1mWidgetStat Load (1.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;36;1mWidgetStat Load (0.6ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;35;1mWidgetStat Load (0.8ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 57ms (View: 31, DB: 3) | 200 OK [http://localhost/line_chart]
+
+
+Processing HomeController#line_chart (for 127.0.0.1 at 2010-02-28 18:59:07) [GET]
+  [4;36;1mWidget Load (0.6ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/line_chart
+  [4;35;1mWidgetStat Load (0.6ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;36;1mWidgetStat Load (0.5ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;35;1mWidgetStat Load (0.5ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 18ms (View: 8, DB: 2) | 200 OK [http://localhost/line_chart]
+
+
+Processing HomeController#line_chart (for 127.0.0.1 at 2010-02-28 19:01:24) [GET]
+  [4;36;1mWidget Load (0.9ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/line_chart
+  [4;35;1mWidgetStat Load (0.7ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;36;1mWidgetStat Load (0.8ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;35;1mWidgetStat Load (0.5ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 47ms (View: 20, DB: 3) | 200 OK [http://localhost/line_chart]
+
+
+Processing HomeController#area_chart (for 127.0.0.1 at 2010-02-28 19:01:34) [GET]
+  [4;36;1mWidget Load (0.6ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/area_chart
+  [4;35;1mWidgetStat Load (0.6ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;36;1mWidgetStat Load (0.6ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;35;1mWidgetStat Load (0.6ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/area_chart]
+
+
+Processing HomeController#bar_chart (for 127.0.0.1 at 2010-02-28 19:01:40) [GET]
+  [4;36;1mWidget Load (0.6ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/bar_chart
+  [4;35;1mWidgetStat Load (0.4ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mWidgetStat Load (0.2ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mWidgetStat Load (0.2ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+Completed in 79ms (View: 73, DB: 1) | 200 OK [http://localhost/bar_chart]
+
+
+Processing HomeController#column_chart (for 127.0.0.1 at 2010-02-28 19:01:43) [GET]
+  [4;35;1mWidget Load (0.6ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/column_chart
+  [4;36;1mWidgetStat Load (0.3ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mWidgetStat Load (0.3ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mWidgetStat Load (0.2ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/column_chart]
+
+
+Processing HomeController#gauge (for 127.0.0.1 at 2010-02-28 19:01:45) [GET]
+  [4;36;1mWidget Load (0.6ms)[0m   [0;1mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/gauge
+  [4;35;1mWidgetStat Load (0.3ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mWidgetStat Load (0.2ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mWidgetStat Load (0.2ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/gauge]
+
+
+Processing HomeController#line_chart (for 127.0.0.1 at 2010-02-28 19:01:47) [GET]
+  [4;35;1mWidget Load (0.6ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/line_chart
+  [4;36;1mWidgetStat Load (0.6ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) [0m
+  [4;35;1mWidgetStat Load (0.5ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) [0m
+  [4;36;1mWidgetStat Load (0.5ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) [0m
+Completed in 16ms (View: 6, DB: 2) | 200 OK [http://localhost/line_chart]
+
+
+Processing HomeController#pie_chart (for 127.0.0.1 at 2010-02-28 19:01:50) [GET]
+  [4;35;1mWidget Load (0.7ms)[0m   [0mSELECT * FROM "widgets" [0m
+Rendering template within layouts/application
+Rendering home/pie_chart
+  [4;36;1mWidgetStat Load (0.3ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mWidgetStat Load (1.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mWidgetStat Load (0.2ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 1) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 2) ORDER BY widget_stats.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "widget_stats" WHERE ("widget_stats".widget_id = 3) ORDER BY widget_stats.id DESC LIMIT 1[0m
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://localhost/pie_chart]

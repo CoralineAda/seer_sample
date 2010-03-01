@@ -1,0 +1,56 @@
+<h2>Pie Chart Example</h2>
+
+<div id="my_pie_chart"></div>
+
+<%= Seer::visualize(
+      @data, 
+      :as => :pie_chart,
+      :in_element => 'my_pie_chart',
+      :series => {
+        :series_label => 'name',
+        :data_method => 'quantity'
+      },
+      :chart_options => { 
+        :height => 300,
+        :width => 300,
+        :title => "Widget Quantities",
+        :point_size => 5,
+        :is_3_d => true
+      }
+    )
+ -%>
+
+<h2>Controller Code</h2>
+
+<blockquote><code><pre>
+  def pie_chart
+    @data = Widget.all
+  end
+</pre></code></blockquote>
+
+<h2>View Code</h2>
+
+<blockquote><code><pre>
+
+&lt;div id="my_pie_chart"&gt;&lt;/div&gt;
+
+&lt;%= Seer::visualize(
+      @data, 
+      :as => :pie_chart,
+      :in_element => 'my_pie_chart',
+      :series => {
+        :series_label => 'name',
+        :data_method => 'quantity'
+      },
+      :chart_options => { 
+        :height => 300,
+        :width => 300,
+        :title => "Widget Quantities",
+        :point_size => 5,
+        :is_3_d => true
+      }
+    )
+ -%&gt;
+</pre></code></blockquote>
+
+<p><a href="/">&laquo; Back to Index</a></p>

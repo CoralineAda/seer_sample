@@ -1,0 +1,54 @@
+<h2>Column Chart Example</h2>
+
+<div id="my_column_chart"></div>
+
+<%= Seer::visualize(
+      @widgets, 
+      :as => :column_chart,
+      :in_element => 'my_column_chart',
+      :series => {:series_label => 'name', :data_method => 'quantity'},
+      :chart_options => {
+        :height => 300,
+        :width => 900,
+        :is_3_d => true,
+        :legend => 'none',
+        :colors => "[{color:'#990000', darker:'#660000'}]",
+        :title => "Widget Quantities",
+        :title_y => 'Quantities'
+      }
+    )
+ -%>
+
+<h2>Controller Code</h2>
+
+<blockquote><code><pre>
+  def column_chart
+    @widgets = Widget.all
+  end
+</pre></code></blockquote>
+
+<h2>View Code</h2>
+
+<blockquote><code><pre>
+
+&lt;div id="my_column_chart"&gt;&lt;/div&gt;
+
+&lt;%= Seer::visualize(
+      @widgets, 
+      :as => :column_chart,
+      :in_element => 'my_column_chart',
+      :series => {:series_label => 'name', :data_method => 'quantity'},
+      :chart_options => {
+        :height => 300,
+        :width => 900,
+        :is_3_d => true,
+        :legend => 'none',
+        :colors => "[{color:'#990000', darker:'#660000'}]",
+        :title => "Widget Quantities",
+        :title_y => 'Quantities'
+      }
+    )
+ -%&gt;
+</pre></code></blockquote>
+
+<p><a href="/">&laquo; Back to Index</a></p>

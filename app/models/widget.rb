@@ -6,6 +6,7 @@ class Widget < ActiveRecord::Base
 
   # Relationships ==================================================================================
   has_many :widget_stats
+  belongs_to :location
   
   # Behaviours =====================================================================================
 

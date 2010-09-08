@@ -20,6 +20,10 @@ class HomeController < ApplicationController
     @data = Widget.all
   end
   
+  def geo_chart
+    @locations = Location.all
+  end
+  
   def line_chart
     @data = Widget.all
     @series = @data.map{|w| w.widget_stats}

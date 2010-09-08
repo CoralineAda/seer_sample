@@ -1,0 +1,54 @@
+<h2>Geochart Example</h2>
+
+<div id="my_geochart"></div>
+
+	<div id="my_geomap_container" class="chart"></div>
+
+	<%= Seer::visualize(
+	      @locations,
+	      :as => :geomap,
+	      :in_element => 'my_geomap_container',
+	      :series => {
+	        :series_label => 'name',
+	        :data_label => '# widgets',
+	        :data_method => 'widget_count'
+	      },
+	      :chart_options => {
+	        :data_mode => 'markers',
+	        :region => 'us_metro',
+	      }  
+	    )
+  -%>
+
+<h2>Controller Code</h2>
+
+<blockquote><code><pre>
+  def geo_chart
+    @locations = Location.all
+  end
+</pre></code></blockquote>
+
+<h2>View Code</h2>
+
+<blockquote><code><pre>
+
+&lt;div id="my_geomap_container"&gt;&lt;/div&gt;
+
+&lt;%= Seer::visualize(
+      @locations,
+      :as => :geomap,
+      :in_element => 'my_geomap_container',
+      :series => {
+        :series_label => 'name',
+        :data_label => '# widgets',
+        :data_method => 'widget_count'
+      },
+      :chart_options => {
+        :data_mode => 'markers',
+        :region => 'us_metro',
+      }  
+    )
+ -%&gt;
+</pre></code></blockquote>
+
+<p><a href="/">&laquo; Back to Index</a></p>

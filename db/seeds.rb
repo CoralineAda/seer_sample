@@ -7,4 +7,4 @@ l1 = Location.create(:name => 'Chicago, IL',   :latitude => '41.850033',  :longi
 l2 = Location.create(:name => 'Austin, TX',    :latitude => '30.267153',  :longitude => '-97.7430608')
 l3 = Location.create(:name => 'Claremont, VA', :latitude => '37.2279264', :longitude => '-76.9641321')
 
-Widget.all.each { |widget| widget.update_attribute(:location_id, [l1, l2, l3].rand.id) }
+Widget.all.each { |widget| widget.update_attribute(:location_id, [l1, l2, l3].sample.id) }

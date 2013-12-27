@@ -2,7 +2,7 @@
 
 <div id="my_column_chart"></div>
 
-<%= Seer::visualize(
+<%= raw Seer::visualize(
       @widgets, 
       :as => :column_chart,
       :in_element => 'my_column_chart',

@@ -2,7 +2,7 @@
 
 <div id="my_area_chart"></div>
 
-<%= Seer::visualize(
+<%= raw Seer::visualize(
       @data, 
       :as => :area_chart,
       :in_element => 'my_area_chart',
@@ -17,7 +17,7 @@
         :width => 1000,
         :axis_font_size => 11,
         :legend => 'right',
-        :colors => ['#7e7587','#990000','#009900'],
+        :colors => [],
         :title => "Widget Quantities",
         :point_size => 5
       }
@@ -54,7 +54,7 @@
         :height => 300,
         :width => 900,
         :legend => 'right',
-        :colors => ['#7e7587','#990000','#009900'],
+        :colors => [],
         :title => "Widget Quantities",
         :point_size => 5
       }

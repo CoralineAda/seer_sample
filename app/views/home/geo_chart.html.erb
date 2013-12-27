@@ -4,7 +4,7 @@
 
 	<div id="my_geomap_container" class="chart"></div>
 
-	<%= Seer::visualize(
+	<%= raw Seer::visualize(
 	      @locations,
 	      :as => :geomap,
 	      :in_element => 'my_geomap_container',
@@ -14,8 +14,9 @@
 	        :data_method => 'widget_count'
 	      },
 	      :chart_options => {
-	        :data_mode => 'markers',
-	        :region => 'us_metro',
+	        :data_mode => 'regions',
+	        :region => 'US',
+	    
 	      }  
 	    )
   -%>
@@ -44,8 +45,8 @@
         :data_method => 'widget_count'
       },
       :chart_options => {
-        :data_mode => 'markers',
-        :region => 'us_metro',
+        :data_mode => 'regions',
+        :region => 'US',
       }  
     )
  -%&gt;

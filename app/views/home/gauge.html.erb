@@ -2,7 +2,7 @@
 
 <div id="my_gauges"></div>
 
-<%= Seer::visualize(
+<%= raw Seer::visualize(
       @data, 
       :as => :gauge,
       :in_element => 'my_gauges',

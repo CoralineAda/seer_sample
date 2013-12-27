@@ -2,7 +2,7 @@
 
 <div id="my_bar_chart"></div>
 
-<%= Seer::visualize(
+<%= raw Seer::visualize(
       @widgets, 
       :as => :bar_chart,
       :in_element => 'my_bar_chart',
@@ -10,9 +10,9 @@
       :chart_options => {
         :height => 300,
         :width => 900,
-        :is_3_d => false,
+        :is_3_d => true,
         :legend => 'none',
-        :colors => ["#990000"],
+        :colors => [],
         :title => "Widget Quantities",
         :title_x => 'Current Quantity'
       }
@@ -40,9 +40,9 @@
       :chart_options => {
         :height => 300,
         :width => 900,
-        :is_3_d => false,
+        :is_3_d => true,
         :legend => 'none',
-        :colors => ["#990000"],
+        :colors => [],
         :title => "Widget Quantities",
         :title_x => 'Quantity'
       }

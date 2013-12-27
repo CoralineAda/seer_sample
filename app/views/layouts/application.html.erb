@@ -4,14 +4,16 @@
 <head>
   <title>Seer Sample Reports</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link href="/stylesheets/core.css" media="all" rel="stylesheet" type="text/css" />
-  <%= yield(:head) -%>
-  <%= Seer::init_visualization -%>
+<%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+  <%= raw Seer::init_visualization %>
 </head>
 
 <body>
 <h1>Seer Sample Reports</h1>
-<%= @content_for_layout -%>
+<%= yield %>
 
 <p class="footer"><a href="http://github.com/Bantik/seer/">Seer</a> was created and is maintained by <a href="http://www.idolhands.com/">Corey Ehmke</a> at <a href="http://www.seologic.com/">SEO Logic</a> and  released under the MIT License.</p>
 

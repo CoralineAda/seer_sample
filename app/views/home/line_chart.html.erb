@@ -2,7 +2,7 @@
 
 <div id="my_line_chart"></div>
 
-<%= Seer::visualize(
+<%= raw Seer::visualize(
       @data, 
       :as => :line_chart,
       :in_element => 'my_line_chart',
@@ -16,7 +16,7 @@
         :height => 300,
         :width => 900,
         :axis_font_size => 11,
-        :colors => ['#7e7587','#990000','#009900'],
+        :colors => [],
         :title => "Widget Quantities",
         :point_size => 5
       }
@@ -52,7 +52,7 @@
         :height => 300,
         :width => 900,
         :axis_font_size => 11,
-        :colors => ['#7e7587','#990000','#009900'],
+        :colors => [],
         :title => "Widget Quantities",
         :point_size => 5
       }
